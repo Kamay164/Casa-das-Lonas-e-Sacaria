@@ -1,0 +1,269 @@
+/* ===== Casa das Lonas & Sacaria — estilos base (mobile-first) ===== */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --verde-mata: #284030;
+  --verde-folha: #5aa64e;   /* só decorativo */
+  --verde-acao: #1e7a34;
+  --verde-acao-escuro: #17602a;
+  --palha: #f2c14e;
+  --palha-claro: #fbf1d3;
+  --creme: #faf7ee;
+  --branco: #ffffff;
+  --texto: #1c2620;
+  --texto-suave: #4a554d;
+  --linha: #e3ddc8;
+
+  --fonte-texto: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --fonte-titulo: "Montserrat", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --t-base: 1.125rem;   /* 18px */
+  --raio: 12px;
+  --gutter: 20px;
+  --altura-topo: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--altura-topo) + 12px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: var(--t-base);
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--creme);
+  padding-bottom: 96px; /* espaço para o botão flutuante */
+}
+
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; }
+p { margin: 0 0 1rem; max-width: 65ch; }
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 .75rem;
+  color: var(--verde-mata);
+}
+h1 { font-size: 2.125rem; }        /* 34px */
+h2 { font-size: 1.75rem; }         /* 28px */
+h3 { font-size: 1.375rem; }        /* 22px */
+
+.container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 var(--gutter); }
+.centro { text-align: center; margin-left: auto; margin-right: auto; }
+
+.icone { width: 1.5em; height: 1.5em; flex: none; }
+
+/* Foco visível */
+:focus-visible { outline: 3px solid var(--palha); outline-offset: 3px; box-shadow: 0 0 0 6px var(--verde-mata); }
+
+.pular {
+  position: absolute; left: 8px; top: -60px; z-index: 100;
+  background: var(--palha); color: var(--texto);
+  padding: 12px 16px; border-radius: 8px; font-weight: 700;
+}
+.pular:focus { top: 8px; }
+
+/* ===== Botões ===== */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  min-height: 56px; padding: 12px 24px;
+  font: 700 1.25rem/1.2 var(--fonte-texto);
+  text-decoration: none; text-align: center;
+  border: 2px solid transparent; border-radius: var(--raio);
+  cursor: pointer; transition: background-color .15s, transform .1s;
+}
+.btn:active { transform: translateY(1px); }
+.btn--whats { background: var(--verde-acao); color: var(--branco); }
+.btn--whats:hover { background: var(--verde-acao-escuro); }
+.btn--verde { background: var(--verde-mata); color: var(--branco); }
+.btn--verde:hover { background: #1c3022; }
+.btn--palha { background: var(--palha); color: var(--texto); }
+.btn--palha:hover { background: #e6b43c; }
+.btn--claro { background: var(--branco); color: var(--verde-mata); }
+.btn--claro:hover { background: var(--palha-claro); }
+.btn--contorno { background: transparent; color: var(--verde-mata); border-color: var(--verde-mata); }
+.btn--contorno:hover { background: rgba(40, 64, 48, .08); }
+.btn--grande { font-size: 1.375rem; min-height: 64px; padding: 14px 28px; }
+
+/* ===== Barra superior ===== */
+.topo { position: sticky; top: 0; z-index: 50; background: var(--verde-mata); color: var(--branco); }
+.topo__linha { height: var(--altura-topo); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topo__logo img { height: 56px; width: auto; border-radius: 6px; }
+.topo__menu { display: none; }
+.topo__ligar { min-height: 48px; padding: 8px 20px; }
+
+/* ===== Blocos de imagem (recebem <img> na etapa 4) ===== */
+.foto {
+  position: relative; overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.10) 0 50%, transparent 50%) 0 0 / 36px 36px,
+    linear-gradient(160deg, #3b5e47, #284030);
+  border-radius: var(--raio);
+}
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+.foto--cartao { aspect-ratio: 4 / 3; border-radius: var(--raio) var(--raio) 0 0; }
+.foto--quadro { aspect-ratio: 4 / 3; }
+.foto--loja { aspect-ratio: 4 / 3; }
+.foto--abertura { aspect-ratio: 4 / 3; }
+
+/* ===== 1. Abertura ===== */
+.abertura { background: var(--verde-mata); color: var(--branco); padding: 32px 0 40px; }
+.abertura h1 { color: var(--branco); }
+.abertura__grade { display: grid; gap: 28px; }
+.abertura__lema { font-size: 1.375rem; color: var(--palha); font-weight: 600; margin-bottom: 1.25rem; }
+.abertura__botoes { display: grid; gap: 12px; margin-bottom: 1.25rem; }
+.abertura__horario { display: flex; align-items: center; gap: .5rem; margin: 0; color: #f3efcf; }
+.abertura__horario .icone { width: 1.25em; height: 1.25em; }
+
+/* ===== 2. Confiança ===== */
+.confianca { background: var(--palha); color: var(--texto); }
+.confianca__lista { list-style: none; margin: 0 auto; padding: 16px var(--gutter); display: grid; gap: 12px; }
+.confianca__lista li { display: flex; align-items: center; gap: 12px; font-size: 1.125rem; line-height: 1.3; }
+.confianca__lista .icone { width: 2rem; height: 2rem; color: var(--verde-mata); }
+
+/* ===== Seções ===== */
+.secao { padding: 48px 0; }
+.secao__intro { color: var(--texto-suave); margin-bottom: 1.75rem; }
+.secao--escura { background: var(--verde-mata); color: var(--branco); }
+.secao--escura h2, .secao--escura h3 { color: var(--branco); }
+.secao--palha { background: var(--palha-claro); }
+
+/* ===== 3. Cartões de produtos ===== */
+.cartoes { display: grid; gap: 24px; }
+.cartao { background: var(--branco); border: 1px solid var(--linha); border-radius: var(--raio); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(28, 38, 32, .06); }
+.cartao__corpo { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+.cartao__corpo p { color: var(--texto-suave); flex: 1; }
+.cartao__corpo .btn { width: 100%; }
+
+/* ===== 4. Passos ===== */
+.passos { list-style: none; margin: 1.5rem 0 2rem; padding: 0; display: grid; gap: 20px; }
+.passos li { display: flex; gap: 16px; align-items: flex-start; }
+.passos h3 { margin-bottom: .25rem; }
+.passos p { margin: 0; color: #f3efcf; }
+.passos__num {
+  flex: none; width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--palha); color: var(--texto);
+  font: 700 1.5rem/1 var(--fonte-titulo);
+}
+
+/* ===== 5. Antes e depois ===== */
+.antes-depois { display: grid; gap: 20px; }
+.antes-depois figure { margin: 0; position: relative; }
+.antes-depois figcaption {
+  position: absolute; left: 12px; top: 12px;
+  background: var(--verde-mata); color: var(--branco);
+  font: 700 1.125rem/1 var(--fonte-titulo); padding: 10px 16px; border-radius: 8px;
+}
+
+/* ===== 6. Visita ===== */
+.visita__grade { display: grid; gap: 28px; }
+.dados { list-style: none; margin: 1rem 0; padding: 0; display: grid; gap: 16px; }
+.dados li { display: flex; gap: 12px; align-items: flex-start; }
+.dados .icone { width: 2rem; height: 2rem; color: var(--verde-mata); margin-top: 2px; }
+.destaque { display: inline-block; background: var(--palha); color: var(--texto); font-weight: 700; padding: 12px 16px; border-radius: 8px; }
+.visita__botoes { display: grid; gap: 12px; margin-top: .5rem; }
+.mapa { grid-column: 1 / -1; aspect-ratio: 4 / 3; border-radius: var(--raio); overflow: hidden; background: var(--branco); }
+.mapa[hidden] { display: none; }
+.mapa iframe { width: 100%; height: 100%; border: 0; }
+
+/* ===== 7. Contato ===== */
+.contatos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 1.5rem; }
+.contato {
+  display: flex; align-items: center; gap: 16px;
+  min-height: 80px; padding: 16px 20px;
+  background: var(--branco); border: 2px solid var(--linha); border-radius: var(--raio);
+  text-decoration: none; line-height: 1.35;
+}
+.contato span { min-width: 0; overflow-wrap: anywhere; }
+.contato:hover { border-color: var(--verde-mata); }
+.contato .icone { width: 2.25rem; height: 2.25rem; color: var(--verde-mata); }
+.contato--whats { background: var(--verde-acao); border-color: var(--verde-acao); color: var(--branco); }
+.contato--whats .icone { color: var(--branco); }
+.contato--whats:hover { background: var(--verde-acao-escuro); border-color: var(--verde-acao-escuro); }
+
+/* ===== 8. Rodapé ===== */
+.rodape { background: var(--verde-mata); color: #f3efcf; padding: 40px 0 16px; }
+.rodape__grade { display: grid; gap: 20px; justify-items: start; }
+.rodape img { border-radius: 8px; width: 96px; height: auto; }
+.rodape__lema { font: 700 1.25rem/1.3 var(--fonte-titulo); color: var(--palha); }
+.rodape a { color: var(--branco); }
+.rodape__direitos { max-width: none; text-align: center; font-size: 1rem; margin: 28px auto 0; padding: 16px var(--gutter) 0; border-top: 1px solid rgba(255,255,255,.2); }
+
+/* ===== Botão flutuante ===== */
+.flutuante {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60;
+  display: inline-flex; align-items: center; gap: .6rem;
+  min-height: 60px; padding: 0 22px;
+  background: var(--verde-acao); color: var(--branco);
+  font: 700 1.25rem/1 var(--fonte-texto); text-decoration: none;
+  border-radius: 999px; box-shadow: 0 6px 18px rgba(0, 0, 0, .3);
+  border: 2px solid var(--branco);
+}
+.flutuante:hover { background: var(--verde-acao-escuro); }
+.flutuante .icone { width: 1.75rem; height: 1.75rem; }
+
+/* ===== Telas pequenas: botões do topo ===== */
+@media (max-width: 359px) {
+  .flutuante span { display: none; }
+  .flutuante { padding: 0 16px; }
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 640px) {
+  .cartoes { grid-template-columns: repeat(2, 1fr); }
+  .contatos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .abertura__botoes { grid-template-columns: repeat(2, auto); justify-content: start; }
+  .antes-depois { grid-template-columns: repeat(2, 1fr); }
+  .foto--quadro { aspect-ratio: 4 / 5; }
+  .confianca__lista { grid-template-columns: repeat(3, 1fr); }
+  .visita__botoes { grid-template-columns: repeat(2, auto); justify-content: start; }
+}
+
+/* ===== Computador ===== */
+@media (min-width: 900px) {
+  :root { --t-base: 1.25rem; --altura-topo: 80px; --gutter: 32px; }  /* 20px */
+  h1 { font-size: 3.25rem; }   /* 52px */
+  h2 { font-size: 2.5rem; }    /* 40px */
+  h3 { font-size: 1.5rem; }    /* 24px */
+
+  .topo__menu { display: flex; gap: 28px; margin-left: auto; margin-right: 24px; }
+  .topo__menu a { text-decoration: none; font-weight: 600; padding: 10px 4px; border-bottom: 3px solid transparent; }
+  .topo__menu a:hover { border-bottom-color: var(--palha); }
+  .topo__logo img { height: 64px; }
+
+  .abertura { padding: 56px 0 64px; }
+  .abertura__grade { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 48px; }
+  .foto--abertura { aspect-ratio: 1 / 1; }
+  .abertura__botoes { grid-template-columns: 1fr; max-width: 380px; }
+
+  .secao { padding: 72px 0; }
+  .cartoes { grid-template-columns: repeat(3, 1fr); }
+  .passos { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .passos li { flex-direction: column; }
+  .visita__grade { grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; }
+  .contatos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .contato { flex-direction: column; text-align: center; justify-content: center; padding: 24px 16px; }
+  .rodape__grade { grid-template-columns: auto 1fr; align-items: center; gap: 32px; }
+}
+
+/* ===== Preferências do usuário ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
