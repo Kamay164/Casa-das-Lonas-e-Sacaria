@@ -14,7 +14,7 @@ Landing page de uma página para a **Casa das Lonas & Sacaria** (Pará de Minas,
 | 3 | HTML e CSS base | Concluída |
 | 4 | Seções completas e imagens | Pendente |
 | 5 | WhatsApp, mapa e interações | Concluída |
-| 6 | Acessibilidade, desempenho e SEO | Pendente |
+| 6 | Acessibilidade, desempenho e SEO | Concluída |
 | 7 | Revisão final e testes | Pendente |
 | 8 | Publicação | Pendente |
 
@@ -31,6 +31,8 @@ HTML5, CSS3 e JavaScript puro (só para o mapa e o aviso "aberto agora"; o site 
 ├── index.html             # página única
 ├── css/style.css          # estilos (mobile-first)
 ├── js/main.js             # mapa sob demanda e aviso aberto/fechado
+├── vercel.json            # cabeçalhos de segurança e cache das fontes
+├── robots.txt, site.webmanifest, favicon.ico, icon-*.png, apple-touch-icon.png
 ├── fonts/                 # Montserrat Bold (woff2)
 ├── assets/                # logo e materiais de referência
 ├── CLAUDE.md              # regras e etapas do projeto (para o Claude Code)
@@ -83,6 +85,12 @@ O projeto é um site estático, sem build:
 ## Fluxo de trabalho
 
 O projeto é feito por etapas, uma de cada vez, com aprovação a cada passo. As regras estão em [`CLAUDE.md`](CLAUDE.md).
+
+## SEO e acessibilidade
+
+- Título, descrição, Open Graph, dados estruturados (loja local e perguntas frequentes), ícones e `robots.txt` já estão no projeto.
+- Lighthouse (celular): desempenho 99, acessibilidade 100, boas práticas 100, SEO 100.
+- **Pendente quando o domínio estiver definido:** `canonical`, `og:url`, `og:image` (precisa de URL completa) e `sitemap.xml`.
 
 ## Observações
 

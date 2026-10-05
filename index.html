@@ -3,10 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Casa das Lonas &amp; Sacaria | Lonas, ferramentas e jardinagem em Pará de Minas</title>
-  <meta name="description" content="Há 23 anos protegendo seu bem. Lonas para silo, lonas sob medida, capas para piscina, sacaria, ferramentas e jardinagem em Pará de Minas, MG. Peça seu orçamento pelo WhatsApp.">
+  <title>Lonas, Sacaria e Ferramentas em Pará de Minas | Casa das Lonas</title>
+  <meta name="description" content="Há 23 anos protegendo seu bem. Lonas para silo, lonas sob medida, capas para piscina, sacaria, ferramentas e jardinagem em Pará de Minas, MG.">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#284030">
-  <link rel="icon" href="assets/logo.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Casa das Lonas &amp; Sacaria">
+  <meta property="og:title" content="Lonas, Sacaria e Ferramentas em Pará de Minas | Casa das Lonas">
+  <meta property="og:description" content="Há 23 anos protegendo seu bem. Lonas para silo, lonas sob medida, capas para piscina, sacaria, ferramentas e jardinagem em Pará de Minas, MG.">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HardwareStore", "name": "Casa das Lonas & Sacaria", "description": "Há 23 anos protegendo seu bem. Lonas para silo, lonas sob medida, capas para piscina, sacaria, ferramentas e jardinagem em Pará de Minas, MG.", "telephone": ["+55-37-3231-5484", "+55-37-99834-6733"], "address": {"@type": "PostalAddress", "streetAddress": "R. Padre Libério, 902 - JK", "addressLocality": "Pará de Minas", "addressRegion": "MG", "addressCountry": "BR"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "18:00"}], "hasMap": "https://maps.app.goo.gl/EQXuwzE8LzYk3DZr7", "sameAs": ["https://www.instagram.com/casadaslonasesacaria/"], "inLanguage": "pt-BR"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como peço um orçamento de lona sob medida?", "acceptedAnswer": {"@type": "Answer", "text": "Informe para que vai usar a lona (cobertura, silo, piscina, carga) e as medidas aproximadas de comprimento e largura. Nossa equipe orienta o melhor material para o seu caso."}}, {"@type": "Question", "name": "Vocês vendem lona para cobrir silo?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Trabalhamos com lonas para cobertura de silagem. Informe o tamanho do silo para calcular a quantidade necessária."}}, {"@type": "Question", "name": "Qual o horário de atendimento?", "acceptedAnswer": {"@type": "Answer", "text": "De segunda a sábado, das 9h às 18h."}}, {"@type": "Question", "name": "Onde fica a loja?", "acceptedAnswer": {"@type": "Answer", "text": "Na R. Padre Libério, 902, bairro JK, em Pará de Minas, MG."}}, {"@type": "Question", "name": "Existem condições especiais para clientes fiéis?", "acceptedAnswer": {"@type": "Answer", "text": "Consulte condições especiais para clientes fiéis ligando ou chamando a loja."}}]}</script>
+  <script>document.documentElement.className+=" js"</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -62,7 +74,7 @@
           <a class="btn btn--whats" href="https://wa.me/5537998346733?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20das%20Lonas%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">
             <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>
             Chamar no WhatsApp
-          </a>
+          <span class="sr-only"> (abre em nova aba)</span></a>
           <a class="btn btn--vidro" href="#produtos">
             Ver produtos
             <svg class="icone" aria-hidden="true"><use href="#i-arrow"/></svg>
@@ -71,6 +83,7 @@
       </div>
 
       <aside class="hero__card" aria-label="Informações da loja">
+        <p class="status js-status" hidden></p>
         <ul>
           <li><svg class="icone" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Horário</strong>Segunda a sábado, 9h às 18h</span></li>
           <li><svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Endereço</strong>R. Padre Libério, 902 — JK</span></li>
@@ -99,7 +112,7 @@
 
       <div class="bento">
         <article class="card card--silo">
-          <img src="assets/img/produto-silo.jpg" alt="Silo coberto com lona branca" width="1200" height="1200" loading="lazy">
+          <img src="assets/img/produto-silo.jpg" alt="Silo coberto com lona branca" width="1200" height="1200" loading="lazy" decoding="async">
           <div class="card__corpo">
             <h3>Lonas para silo</h3>
             <p>Lona para silagem, resistente ao sol e à chuva.</p>
@@ -107,7 +120,7 @@
         </article>
 
         <article class="card card--larga">
-          <img src="assets/img/produto-sob-medida.jpg" alt="Tenda de lona verde feita sob medida" width="1200" height="700" loading="lazy">
+          <img src="assets/img/produto-sob-medida.jpg" alt="Tenda de lona verde feita sob medida" width="1200" height="700" loading="lazy" decoding="async">
           <div class="card__corpo">
             <h3>Lonas sob medida</h3>
             <p>Coberturas e tendas no tamanho que você precisa.</p>
@@ -115,7 +128,7 @@
         </article>
 
         <article class="card">
-          <img src="assets/img/produto-piscina.jpg" alt="Piscina protegida com capa de lona" width="1000" height="1000" loading="lazy">
+          <img src="assets/img/produto-piscina.jpg" alt="Piscina protegida com capa de lona" width="1000" height="1000" loading="lazy" decoding="async">
           <div class="card__corpo">
             <h3>Capas para piscina</h3>
             <p>Proteção feita na medida da sua piscina.</p>
@@ -123,7 +136,7 @@
         </article>
 
         <article class="card">
-          <img src="assets/img/produto-sacaria.jpg" alt="Pilha de sacos de ráfia" width="1000" height="1000" loading="lazy">
+          <img src="assets/img/produto-sacaria.jpg" alt="Pilha de sacos de ráfia" width="1000" height="1000" loading="lazy" decoding="async">
           <div class="card__corpo">
             <h3>Sacaria</h3>
             <p>Sacos para grãos, ração e armazenagem.</p>
@@ -131,7 +144,7 @@
         </article>
 
         <article class="card card--larga">
-          <img src="assets/img/produto-ferramentas.jpg" alt="Ferramentas agrícolas penduradas em uma prateleira" width="1200" height="700" loading="lazy">
+          <img src="assets/img/produto-ferramentas.jpg" alt="Ferramentas agrícolas penduradas em uma prateleira" width="1200" height="700" loading="lazy" decoding="async">
           <div class="card__corpo">
             <h3>Ferramentas</h3>
             <p>Garfos, enxadas, correntes, cordas e cintas de carga.</p>
@@ -139,7 +152,7 @@
         </article>
 
         <article class="card card--larga">
-          <img src="assets/img/produto-jardinagem.jpg" alt="Ferramentas e vasos de jardinagem" width="1200" height="700" loading="lazy">
+          <img src="assets/img/produto-jardinagem.jpg" alt="Ferramentas e vasos de jardinagem" width="1200" height="700" loading="lazy" decoding="async">
           <div class="card__corpo">
             <h3>Jardinagem</h3>
             <p>Tudo para cuidar do seu jardim e da sua horta.</p>
@@ -203,7 +216,7 @@
         <a class="btn btn--whats btn--grande" href="https://wa.me/5537998346733?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20das%20Lonas%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">
           <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>
           Pedir orçamento
-        </a>
+        <span class="sr-only"> (abre em nova aba)</span></a>
       </p>
     </div>
   </section>
@@ -216,11 +229,11 @@
       <p class="secao__intro">Uma capa de lona sob medida protege a piscina o ano todo.</p>
       <div class="antes-depois">
         <figure>
-          <img src="assets/img/antes.jpg" alt="Piscina descoberta, antes da instalação da capa" width="1000" height="750" loading="lazy">
+          <img src="assets/img/antes.jpg" alt="Piscina descoberta, antes da instalação da capa" width="1000" height="750" loading="lazy" decoding="async">
           <figcaption>Antes</figcaption>
         </figure>
         <figure>
-          <img src="assets/img/depois.jpg" alt="Piscina coberta com capa de lona, depois da instalação" width="1000" height="750" loading="lazy">
+          <img src="assets/img/depois.jpg" alt="Piscina coberta com capa de lona, depois da instalação" width="1000" height="750" loading="lazy" decoding="async">
           <figcaption>Depois</figcaption>
         </figure>
       </div>
@@ -262,10 +275,11 @@
   <section class="secao" id="visita" aria-labelledby="titulo-visita">
     <div class="container">
       <div class="visita">
-        <img class="visita__img" src="assets/img/loja.jpg" alt="Galpão da loja com portão aberto e produtos à mostra" width="1200" height="900" loading="lazy">
+        <img class="visita__img" src="assets/img/loja.jpg" alt="Galpão da loja com portão aberto e produtos à mostra" width="1200" height="900" loading="lazy" decoding="async">
         <div class="visita__info">
           <p class="rotulo">A loja</p>
           <h2 id="titulo-visita">Venha nos visitar</h2>
+          <p class="status js-status" hidden></p>
           <ul class="dados">
             <li><svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Endereço</strong>R. Padre Libério, 902 — JK<br>Pará de Minas, MG</span></li>
             <li><svg class="icone" aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Horário</strong>Segunda a sábado, das 9h às 18h</span></li>
@@ -275,7 +289,7 @@
             <a class="btn btn--verde" href="https://maps.app.goo.gl/EQXuwzE8LzYk3DZr7" target="_blank" rel="noopener">
               <svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg>
               Abrir no Google Maps
-            </a>
+            <span class="sr-only"> (abre em nova aba)</span></a>
             <button class="btn btn--contorno" type="button" id="botao-mapa" aria-expanded="false" aria-controls="area-mapa">
               Mostrar mapa aqui
             </button>
@@ -295,7 +309,7 @@
         <a class="contato" href="https://wa.me/5537998346733" target="_blank" rel="noopener">
           <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>
           <span><strong>WhatsApp</strong>(37) 99834-6733</span>
-        </a>
+        <span class="sr-only"> (abre em nova aba)</span></a>
         <a class="contato" href="tel:+553732315484">
           <svg class="icone" aria-hidden="true"><use href="#i-phone"/></svg>
           <span><strong>Telefone</strong>(37) 3231-5484</span>
@@ -303,11 +317,11 @@
         <a class="contato" href="https://www.instagram.com/casadaslonasesacaria/" target="_blank" rel="noopener">
           <svg class="icone" aria-hidden="true"><use href="#i-insta"/></svg>
           <span><strong>Instagram</strong>@casadaslonasesacaria</span>
-        </a>
+        <span class="sr-only"> (abre em nova aba)</span></a>
         <a class="contato" href="https://maps.app.goo.gl/EQXuwzE8LzYk3DZr7" target="_blank" rel="noopener">
           <svg class="icone" aria-hidden="true"><use href="#i-pin"/></svg>
           <span><strong>Endereço</strong>R. Padre Libério, 902 — JK</span>
-        </a>
+        <span class="sr-only"> (abre em nova aba)</span></a>
       </div>
     </div>
   </section>
@@ -318,7 +332,7 @@
 <footer class="rodape">
   <div class="container rodape__grade">
     <div class="rodape__marca">
-      <img src="assets/logo.jpeg" alt="Logo Casa das Lonas &amp; Sacaria" width="96" height="99" loading="lazy">
+      <img src="assets/logo.jpeg" alt="Logo Casa das Lonas &amp; Sacaria" width="96" height="99" loading="lazy" decoding="async">
       <p class="rodape__lema">Há 23 anos protegendo seu bem.</p>
     </div>
     <div>
@@ -327,17 +341,21 @@
     </div>
     <div>
       <h3>Contato</h3>
-      <p><a href="tel:+553732315484">(37) 3231-5484</a><br><a href="https://wa.me/5537998346733" target="_blank" rel="noopener">(37) 99834-6733 (WhatsApp)</a><br><a href="https://www.instagram.com/casadaslonasesacaria/" target="_blank" rel="noopener">@casadaslonasesacaria</a></p>
+      <p><a href="tel:+553732315484">(37) 3231-5484</a><br><a href="https://wa.me/5537998346733" target="_blank" rel="noopener">(37) 99834-6733 (WhatsApp)<span class="sr-only"> (abre em nova aba)</span></a><br><a href="https://www.instagram.com/casadaslonasesacaria/" target="_blank" rel="noopener">@casadaslonasesacaria<span class="sr-only"> (abre em nova aba)</span></a></p>
     </div>
   </div>
   <p class="rodape__direitos">© 2026 Casa das Lonas &amp; Sacaria. Todos os direitos reservados.</p>
 </footer>
 
+<script src="js/main.js" defer></script>
+
 <!-- BOTÃO FLUTUANTE -->
+<aside aria-label="Atalho para o WhatsApp">
 <a class="flutuante" href="https://wa.me/5537998346733?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Casa%20das%20Lonas%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg class="icone" aria-hidden="true"><use href="#i-whatsapp"/></svg>
   <span>WhatsApp</span>
-</a>
+<span class="sr-only"> (abre em nova aba)</span></a>
+</aside>
 
 </body>
 </html>

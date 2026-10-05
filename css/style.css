@@ -82,6 +82,12 @@ h3 { font-size: 1.25rem; }                           /* 20px */
 }
 .rotulo--claro { background: rgba(255, 255, 255, .14); color: var(--branco); }
 
+/* Texto só para leitores de tela */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
 /* Foco visível */
 :focus-visible { outline: 3px solid var(--palha); outline-offset: 3px; box-shadow: 0 0 0 6px var(--verde-mata); }
 
@@ -148,6 +154,23 @@ h3 { font-size: 1.25rem; }                           /* 20px */
 .hero__card li { display: flex; gap: 14px; align-items: flex-start; line-height: 1.35; }
 .hero__card .icone { width: 1.75rem; height: 1.75rem; color: var(--palha); margin-top: 2px; }
 .hero__card strong { display: block; font-size: .9375rem; text-transform: uppercase; letter-spacing: .05em; color: #f3efcf; }
+
+/* ===== Aviso aberto/fechado ===== */
+.status {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin: 0 0 1rem; padding: 8px 16px; border-radius: 999px;
+  border: 1px solid currentColor; font-weight: 700; font-size: 1.0625rem; line-height: 1.3;
+}
+.status[hidden] { display: none; }
+.status::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: #9aa39c; flex: none; }
+.status--aberto::before { background: #3ecf5a; box-shadow: 0 0 0 4px rgba(62, 207, 90, .25); }
+.status--fechado::before { background: #e5534b; box-shadow: 0 0 0 4px rgba(229, 83, 75, .25); }
+.hero__card .status { color: var(--branco); border-color: rgba(255, 255, 255, .4); }
+.visita__info .status { color: var(--verde-mata); border-color: rgba(40, 64, 48, .4); }
+
+/* Botão do mapa só aparece se o JavaScript estiver ativo */
+#botao-mapa { display: none; }
+.js #botao-mapa { display: inline-flex; }
 
 /* ===== Números ===== */
 .numeros { background: var(--palha); color: var(--texto); }
@@ -321,7 +344,7 @@ h3 { font-size: 1.25rem; }                           /* 20px */
   .topo__menu a:hover { border-bottom-color: var(--palha); }
   .topo__logo img { height: 64px; }
 
-  .hero::before { background: linear-gradient(90deg, rgba(20, 35, 26, .95) 0%, rgba(20, 35, 26, .78) 45%, rgba(20, 35, 26, .35) 100%); }
+  .hero::before { background: linear-gradient(90deg, rgba(20, 35, 26, .95) 0%, rgba(20, 35, 26, .86) 58%, rgba(20, 35, 26, .45) 100%); }
   .hero__grade { grid-template-columns: 1.4fr 1fr; align-items: center; gap: 56px; min-height: 620px; padding-top: 72px; padding-bottom: 72px; }
   .hero__botoes { grid-template-columns: repeat(2, auto); }
   .hero__card { padding: 28px; }
