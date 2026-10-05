@@ -98,7 +98,7 @@ Casa das lonas/
 
 - Não inventar dados reais da empresa. Conteúdo fictício só conforme a seção 0.1 (sempre `[DEMO]`); imagens externas conforme a seção 6.1.
 - Não alterar nem apagar arquivos em `assets/originais/`.
-- Não instalar dependências, não criar backend, não coletar dados de visitantes, sem formulários que exijam servidor.
+- Não instalar dependências, não criar backend, não coletar dados de visitantes. **Nenhum formulário no site: todo contato e orçamento vai para o WhatsApp.**
 - Não incluir rastreadores/analytics sem pedido.
 - Não publicar nem fazer deploy sem pedido explícito.
 - Mudanças pequenas e focadas; não refatorar o que já foi aprovado.

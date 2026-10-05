@@ -6,18 +6,23 @@
 
 | Item | Onde aparece | Situação | Como trocar |
 |---|---|---|---|
-| "Toque em 'Pedir orçamento' e fale direto com a nossa equipe pelo WhatsApp." | `index.html`, seção Produtos (intro) | Texto de apoio criado | Editar o parágrafo `.secao__intro` |
+| "Tudo para proteger, cobrir, armazenar e cuidar, em um só lugar." | Seção Produtos (intro) | Texto de apoio criado | Editar `.secao__intro` |
 | Textos de **Sacaria** e **Jardinagem** ("Sacos para grãos, ração e armazenagem." / "Tudo para cuidar do seu jardim e da sua horta.") | Seção Produtos | Genéricos, sem dados do cliente | Trocar pelos produtos reais |
 | Seção "Como pedir seu orçamento" (3 passos) | `#orcamento` | Fluxo sugerido, não confirmado pelo cliente | Ajustar os passos ao atendimento real |
 | "Veja como uma capa de lona sob medida protege a piscina." | Seção Trabalho feito | Texto de apoio criado | Editar |
 | Faixa de confiança: "Lonas sob medida para o seu projeto" | `.confianca` | Baseada na arte do Instagram | Conferir com o cliente |
+| Diferencial "Atendimento próximo — Equipe que orienta na escolha do produto certo." | Seção Por que nós | Afirmação genérica | Confirmar com o cliente |
+| Diferenciais "Tradição" (campo e cidade) e "Tudo em um lugar" | Seção Por que nós | Baseados em dados reais, redação criada | Conferir |
+| Lista "Atendemos": produtores rurais, sítios e chácaras, obras, residências e piscinas, comércio e eventos | Seção Por que nós | Público suposto | Ajustar ao público real |
+| "3 linhas: lonas, ferramentas e jardinagem" | Faixa de números | Contagem baseada na descrição da loja | Conferir |
+| FAQ: respostas sobre orçamento sob medida, silo, horário, endereço e condições para clientes fiéis | Seção Perguntas frequentes | Redação criada; horário, endereço e frase de clientes fiéis são reais | Revisar com o cliente |
 | Lista de 6 produtos como oferta atual | Seção Produtos | Baseada nas artes e no nome; sem lista oficial | Confirmar catálogo |
 
 ## Imagens (nomes fixos para a troca)
 
-Todas serão externas na etapa 4, exceto a logo. Hoje são blocos de cor (`data-imagem`).
+Hoje são imagens-guia (degradê verde) com o nome final. Para trocar, salve a foto com o mesmo nome e a extensão `.jpg`. Tamanho ideal: 1600 px de largura (abertura) e 1200 px (demais); o site recorta sozinho (`object-fit: cover`).
 
-| Nome do arquivo (em `assets/img/`) | Onde aparece | Substituir por |
+| Arquivo em `assets/img/` (.jpg) | Onde aparece | Substituir por |
 |---|---|---|
 | `abertura` | Topo | Foto de silagem ou campo da região |
 | `produto-silo` | Cartão Lonas para silo | Foto real de silo coberto |
