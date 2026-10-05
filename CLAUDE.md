@@ -42,23 +42,34 @@ Público: pessoas do **agro** e **mais velhas**, muitas em celular simples, cone
 - Imagens otimizadas: WebP/JPG, `loading="lazy"`, `width`/`height` definidos, `alt` descritivo.
 - Publicação alvo: hospedagem gratuita estática (Netlify, Vercel ou GitHub Pages). Domínio fica para depois.
 
-## 4. Estrutura de pastas prevista
+## 4. Estrutura de pastas
+
+Só a pasta `public/` vai para o ar (Vercel, `outputDirectory: "public"`). Tudo fora dela é interno e **nunca fica acessível no site**.
 
 ```
 Casa das lonas/
+├── public/                 # TUDO que o site publica
+│   ├── index.html
+│   ├── css/style.css
+│   ├── js/main.js
+│   ├── fonts/
+│   ├── assets/
+│   │   ├── img/            # imagens usadas no site (nomes fixos)
+│   │   └── logo.jpeg
+│   ├── favicon.ico, icon-*.png, apple-touch-icon.png
+│   └── robots.txt, site.webmanifest
+├── assets/                 # materiais de referência do cliente (NÃO publicados)
+├── vercel.json             # saída = public, cabeçalhos de segurança
+├── .gitignore
 ├── CLAUDE.md
-├── index.html
-├── css/style.css
-├── js/main.js
-├── assets/
-│   ├── img/         # fotos otimizadas usadas no site
-│   ├── originais/   # fotos originais do Instagram (não alterar)
-│   └── logo/
-├── conteudo.md      # dados da empresa aprovados (fonte da verdade)
-├── direcao-visual.md # paleta, tipografia, seções e wireframe (etapa 2)
-├── demo-content.md  # lista interna de itens fictícios (criado na etapa 3)
-└── README.md        # como publicar e como editar textos/telefone
+├── conteudo.md             # dados da empresa aprovados (fonte da verdade)
+├── direcao-visual.md       # paleta, tipografia, seções e wireframe (etapa 2)
+├── demo-content.md         # lista interna de itens fictícios
+├── checklist-final.md      # revisão final (etapa 7)
+└── README.md               # como publicar e como editar
 ```
+
+**Regra:** arquivos do site (HTML, CSS, JS, fontes, imagens, ícones) vão em `public/`. Documentos internos (`.md`) e materiais de referência ficam fora de `public/`.
 
 ## 5. Etapas (cada uma separada; só avançar com autorização)
 
@@ -91,7 +102,7 @@ Casa das lonas/
   - Imagem externa deve mostrar o produto/uso real (lona, sacaria, campo). Não usar imagens que sugiram produtos/marcas que a loja não vende.
   - **Mostrar ao Vinicius as imagens externas escolhidas e esperar aprovação** antes de usá-las. Marcá-las como "ilustrativa" no controle interno para troca futura por foto real.
 - Imagem externa nunca deve ser apresentada como foto real da loja ou de um trabalho da loja; registrar como `[DEMO]`.
-- Copiar para `assets/originais/` antes de otimizar; renomear com nomes descritivos (ex.: `lona-agricola.jpg`) nas pastas de uso.
+- Guardar o original em `assets/originais/` (fora de `public/`) antes de otimizar; renomear com nomes descritivos (ex.: `lona-agricola.jpg`) nas pastas de uso.
 - O vídeo só entra se for leve (comprimido), sem autoplay com som.
 
 ## 7. Regras e restrições
@@ -108,6 +119,8 @@ Casa das lonas/
 
 - Início de cada etapa: dizer qual etapa está executando e o que vai fazer (curto).
 - Fim de cada etapa: resumo de 3–6 linhas, o que foi verificado, pendências e **pergunta de autorização** para a próxima.
+- **Git (regra do Vinicius):** ao concluir cada etapa, informar os comandos exatos de git para ele rodar (o Claude não faz commit nem push): `git add .`, `git commit -m "Etapa N: resumo"` e `git push`. O repositório já está ligado ao GitHub (branch `main`) e à Vercel, então cada push publica o site.
+- Ao checar a regra "sem demo na página", buscar `\bdemo` (com limite de palavra); "Atendemos" contém "demo" e é válido.
 - Código limpo e comentado de forma breve; classes CSS com nomes claros em português ou inglês consistente; variáveis CSS para cores e tamanhos.
 - Economia de tokens: ler só os arquivos necessários, não repetir conteúdo longo no chat, editar com mudanças pontuais.
 - Registrar decisões aprovadas em `conteudo.md` ou `README.md`.

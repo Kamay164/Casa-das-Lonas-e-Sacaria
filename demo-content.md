@@ -21,7 +21,7 @@
 
 Hoje são imagens-guia (degradê verde) com o nome final. Para trocar, salve a foto com o mesmo nome e a extensão `.jpg`. Tamanho ideal: 1600 px de largura (abertura) e 1200 px (demais); o site recorta sozinho (`object-fit: cover`).
 
-| Arquivo em `assets/img/` (.jpg) | Onde aparece | Substituir por |
+| Arquivo em `public/assets/img/` (.jpg) | Onde aparece | Substituir por |
 |---|---|---|
 | `abertura` | Topo | Foto de silagem ou campo da região |
 | `produto-silo` | Cartão Lonas para silo | Foto real de silo coberto |
