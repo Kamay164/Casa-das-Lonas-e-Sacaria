@@ -15,10 +15,10 @@ Landing page de uma página para a **Casa das Lonas & Sacaria** (Pará de Minas,
 | 4 | Seções completas e imagens | Pendente |
 | 5 | WhatsApp, mapa e interações | Concluída |
 | 6 | Acessibilidade, desempenho e SEO | Concluída |
-| 7 | Revisão final e testes | Pendente |
+| 7 | Revisão final e testes | Concluída |
 | 8 | Publicação | Pendente |
 
-As imagens do site ainda são blocos de cor provisórios (etapa 4).
+As imagens do site ainda são provisórias (degradê verde com o nome final em `assets/img/`); a etapa 4 fecha quando as fotos entrarem.
 
 ## Tecnologias
 
@@ -39,6 +39,7 @@ HTML5, CSS3 e JavaScript puro (só para o mapa e o aviso "aberto agora"; o site 
 ├── conteudo.md            # dados da empresa (fonte da verdade)
 ├── direcao-visual.md      # paleta, tipografia, seções e wireframe
 ├── demo-content.md        # lista interna de itens provisórios
+├── checklist-final.md     # resultado da revisão final (etapa 7)
 └── README.md
 ```
 
@@ -89,7 +90,7 @@ O projeto é feito por etapas, uma de cada vez, com aprovação a cada passo. As
 ## SEO e acessibilidade
 
 - Título, descrição, Open Graph, dados estruturados (loja local e perguntas frequentes), ícones e `robots.txt` já estão no projeto.
-- Lighthouse (celular): desempenho 99, acessibilidade 100, boas práticas 100, SEO 100.
+- Lighthouse (celular): desempenho 99, acessibilidade 100, boas práticas 100, SEO 100. Detalhes dos testes em `checklist-final.md`.
 - **Pendente quando o domínio estiver definido:** `canonical`, `og:url`, `og:image` (precisa de URL completa) e `sitemap.xml`.
 
 ## Observações

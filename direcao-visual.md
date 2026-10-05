@@ -2,6 +2,8 @@
 
 > Documento interno para aprovação. Nada aqui aparece no site. Itens `[DEMO]` são fictícios/ilustrativos e serão listados em `demo-content.md` na etapa 3.
 
+> **Atualização da etapa 4 (pedido do Vinicius):** layout mais moderno e menos chamadas para o WhatsApp. A ordem atual das seções é: barra superior · abertura (foto de fundo + cartão com horário, endereço e telefone) · faixa de números · produtos em grade de tamanhos variados (sem botão por produto) · por que nós + "Atendemos" · como pedir orçamento (único botão de orçamento) · antes e depois · perguntas frequentes · venha nos visitar (com mapa sob demanda e aviso aberto/fechado) · fale com a gente · rodapé · botão flutuante. Botões agora em formato de pílula e cantos de 24 px. Paleta e tipografia mantidas.
+
 ## 1. Princípios
 
 1. **Ler sem óculos**: letra grande, frases curtas, alto contraste.
