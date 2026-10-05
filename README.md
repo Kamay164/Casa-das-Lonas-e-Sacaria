@@ -13,7 +13,7 @@ Landing page de uma página para a **Casa das Lonas & Sacaria** (Pará de Minas,
 | 2 | Direção visual e estrutura | Concluída |
 | 3 | HTML e CSS base | Concluída |
 | 4 | Seções completas e imagens | Pendente |
-| 5 | WhatsApp, mapa e interações | Pendente |
+| 5 | WhatsApp, mapa e interações | Concluída |
 | 6 | Acessibilidade, desempenho e SEO | Pendente |
 | 7 | Revisão final e testes | Pendente |
 | 8 | Publicação | Pendente |
@@ -22,7 +22,7 @@ As imagens do site ainda são blocos de cor provisórios (etapa 4).
 
 ## Tecnologias
 
-HTML5, CSS3 e JavaScript puro. Sem frameworks, sem build e sem dependências. Fonte Montserrat (700) hospedada localmente; ícones em SVG dentro do próprio HTML.
+HTML5, CSS3 e JavaScript puro (só para o mapa e o aviso "aberto agora"; o site funciona sem JavaScript). Sem frameworks, sem build e sem dependências. Fonte Montserrat (700) hospedada localmente; ícones em SVG dentro do próprio HTML.
 
 ## Estrutura
 
@@ -30,6 +30,7 @@ HTML5, CSS3 e JavaScript puro. Sem frameworks, sem build e sem dependências. Fo
 .
 ├── index.html             # página única
 ├── css/style.css          # estilos (mobile-first)
+├── js/main.js             # mapa sob demanda e aviso aberto/fechado
 ├── fonts/                 # Montserrat Bold (woff2)
 ├── assets/                # logo e materiais de referência
 ├── CLAUDE.md              # regras e etapas do projeto (para o Claude Code)
@@ -53,6 +54,8 @@ npx serve .
 |---|---|
 | Telefone, WhatsApp, endereço, horário | `index.html` (procure por `5537998346733`, `3231-5484`, `Padre Libério`, `9h às 18h`) |
 | Mensagem pronta do WhatsApp | O texto depois de `?text=` nos links `wa.me` (precisa estar codificado para URL) |
+| Horário usado no aviso "aberto agora" | Constantes `ABRE` e `FECHA` no começo de `js/main.js` |
+| Local do mapa embutido | Variável `MAPA_URL` em `js/main.js` |
 | Cores e tamanhos de letra | Variáveis no começo de `css/style.css` (`:root`) |
 | Imagens | Salvar a nova foto com o **mesmo nome** da função (ver `demo-content.md`), em `assets/img/` (a partir da etapa 4) |
 
